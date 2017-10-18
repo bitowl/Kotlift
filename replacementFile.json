@@ -1,90 +1,22 @@
 [
   // START - DO NOT MODIFY THIS SECTION
   // When multiple is false, the string will only be replaced once per line
-  {
-    "from": "val",
-    "to": "let",
-    "multiple": true
-  },
-  {
-    "from": "null",
-    "to": "nil",
-    "multiple": true
-  },
-  {
-    "from": "this",
-    "to": "self",
-    "multiple": true
-  },
-  {
-    "from": "Unit",
-    "to": "Void",
-    "multiple": true
-  },
-  {
-    "from": "Boolean",
-    "to": "Bool",
-    "multiple": true
-  },
-  {
-    "from": "Float",
-    "to": "Double",
-    "multiple": true
-  },
-  {
-    "from": "Long",
-    "to": "Int64",
-    "multiple": true
-  },
-  {
-    "from": "Int",
-    "to": "Int32",
-    "multiple": true
-  },
-  {
-    "from": "Short",
-    "to": "Int16",
-    "multiple": true
-  },
-  {
-    "from": "Byte",
-    "to": "Int8",
-    "multiple": true
-  },
-  {
-    "from": "println",
-    "to": "print",
-    "multiple": true
-  },
-  {
-    "from": "print\\(\\)",
-    "to": "print(\"\")",
-    "multiple": true
-  },
-  {
-    "from": "interface",
-    "to": "protocol",
-    "multiple": true
-  },
-  {
-    "from": "get\\(\\)",
-    "to": "get",
-    "multiple": true
-  },
-  {
-    "from": "protected",
-    "to": "internal",
-    "multiple": true
-  },
-  {
-    "from": "Collection",
-    "to": "Array",
-    "multiple": true
-  },
-  {
-    "from": ".invoke",
-    "to": "",
-    "multiple": true
-  }
+  {"from": "val", "to": "let", "multiple": true},
+  {"from": "null", "to": "nil", "multiple": true},
+  {"from": "this", "to": "self", "multiple": true},
+  {"from": "Unit", "to": "Void", "multiple": true},
+  {"from": "Boolean", "to": "Bool", "multiple": true},
+  {"from": "Float", "to": "Double", "multiple": true},
+  {"from": "Long", "to": "Int64", "multiple": true},
+  {"from": "Int", "to": "Int32", "multiple": true},
+  {"from": "Short", "to": "Int16", "multiple": true},
+  {"from": "Byte", "to": "Int8", "multiple": true},
+  {"from": "println", "to": "print", "multiple": true},
+  {"from": "print\\(\\)", "to": "print(\"\")", "multiple": true},
+  {"from": "interface", "to": "protocol", "multiple": true},
+  {"from": "get\\(\\)", "to": "get", "multiple": true},
+  {"from": "protected", "to": "internal", "multiple": true},
+  {"from": "Collection", "to": "Array", "multiple": true},
+  {"from": ".invoke", "to": "", "multiple": true}
   // END - DO NOT MODIFY THIS SECTION
 ]
