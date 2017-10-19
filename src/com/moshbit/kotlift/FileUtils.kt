@@ -7,7 +7,7 @@ fun listFiles(directoryName: String, files: ArrayList<File>, extension: String =
   val directory = File(directoryName)
 
   // get all the files from a directory
-  val fList = directory.listFiles()
+  val fList = directory.listFiles()?.sorted()
 
   if (fList != null) {
     for (file in fList) {
