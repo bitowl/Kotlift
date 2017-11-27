@@ -621,6 +621,13 @@ class Transpiler(val replacements: List<Replacement>) {
         line = line.replace(Regex("(\\s*)if ([A-Za-z_][A-Za-z0-9_]*) != nil \\{"), "$1if let $2 = $2 {")
       }
 
+      ////  Custom replacements ////
+
+      // translations: i18n(R.string.test -> i18n("test"
+      if (line.matches(Regex("(.*)i18n\\(R\\.string\\.([A-Za-z_][A-Za-z0-9_]*)(.*)"))) {
+        line = line.replace(Regex("(.*)i18n\\(R\\.string\\.([A-Za-z_][A-Za-z0-9_]*)(.*)"), "$1i18n(\\\"$2\\\"$3")
+      }
+
       dest.add(line)
 
       if (nextOutputLine != null) {

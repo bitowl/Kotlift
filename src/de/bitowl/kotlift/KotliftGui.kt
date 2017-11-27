@@ -27,7 +27,7 @@ class KotliftGui : Application() {
       Replacement("Boolean", "Bool", true),
       Replacement("Float", "Double", true),
       Replacement("Long", "Int64", true),
-      Replacement("Int", "Int32", true),
+      // Replacement("Int", "Int32", true),
       Replacement("Short", "Int16", true),
       Replacement("Byte", "Int8", true),
       Replacement("println", "print", true),
@@ -36,7 +36,9 @@ class KotliftGui : Application() {
       Replacement("get\\(\\)", "get", true),
       Replacement("protected", "internal", true),
       Replacement("Collection", "Array", true),
-      Replacement(".invoke", "", true)
+      Replacement(".invoke", "", true),
+      // Added
+      Replacement("Throwable", "Error", true)
   ))
 
   override fun start(stage: Stage) {
@@ -45,6 +47,9 @@ class KotliftGui : Application() {
     val kotlin = Label("Kotlin Code")
     kotlinCode = TextArea()
     kotlinCode.promptText = "Kotlin Code"
+    kotlinCode.setOnMouseClicked {
+      kotlinCode.selectAll()
+    }
 
     val swift = Label("Swift Code")
     swiftCode = TextArea()
