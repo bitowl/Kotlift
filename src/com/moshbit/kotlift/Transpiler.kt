@@ -624,8 +624,13 @@ class Transpiler(val replacements: List<Replacement>) {
       ////  Custom replacements ////
 
       // translations: i18n(R.string.test -> i18n("test"
-      if (line.matches(Regex("(.*)i18n\\(R\\.string\\.([A-Za-z_][A-Za-z0-9_]*)(.*)"))) {
+      while (line.matches(Regex("(.*)i18n\\(R\\.string\\.([A-Za-z_][A-Za-z0-9_]*)(.*)"))) {
         line = line.replace(Regex("(.*)i18n\\(R\\.string\\.([A-Za-z_][A-Za-z0-9_]*)(.*)"), "$1i18n(\\\"$2\\\"$3")
+      }
+
+      // return in closure: return@test -> return
+      if (line.matches(Regex("(\\s*)return@([A-Za-z_][A-Za-z0-9_]*) (.*)"))) {
+        line = line.replace(Regex("(\\s*)return@([A-Za-z_][A-Za-z0-9_]*) (.*)"), "$1return $3")
       }
 
       dest.add(line)
